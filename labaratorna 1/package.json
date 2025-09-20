@@ -1,15 +1,13 @@
 {
-    "name" : "js-exercises",
-    "version" : "1.0.0",
-    "description" : "JavaScript exercises",
+    "name": "js-exercises",
+    "version": "1.0.0",
+    "description": "JavaScript exercises",
     "scripts": {
         "lint": "eslint .",
-        "test": "node src/hosting.js && node src/counter.js"
+        "test": "node hoisting.js && node counter.js && node type.js",
+        "start": "node hoisting.js && node counter.js && node type.js"
     },
     "devDependencies": {
         "eslint": "^8.45.0"
     }
-
-   
-
 }
