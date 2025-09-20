@@ -1,13 +1,25 @@
 'use strict';
 
-// Task 1: Phone book using array of objects
+/**
+ * @fileoverview Вправа на роботу з колекціями у JavaScript
+ * @author Your Name
+ */
+
+/**
+ * Телефонна книга у вигляді масиву об'єктів
+ * @type {Array<{name: string, phone: string}>}
+ */
 const phoneBook = [
   { name: 'Marcus Aurelius', phone: '+380445554433' },
   { name: 'John Doe', phone: '+380445556677' },
   { name: 'Jane Smith', phone: '+380445559988' }
 ];
 
-// Task 2: Find phone by name using array
+/**
+ * Функція пошуку телефону за ім'ям у масиві
+ * @param {string} name - Ім'я для пошуку
+ * @returns {string|null} Знайдений номер телефону або null
+ */
 const findPhoneByName = (name) => {
   for (let i = 0; i < phoneBook.length; i++) {
     if (phoneBook[i].name === name) {
@@ -17,17 +29,24 @@ const findPhoneByName = (name) => {
   return null;
 };
 
-// Task 3: Phone book using hash table (object)
+/**
+ * Телефонна книга у вигляді хеш-таблиці (об'єкта)
+ * @type {Object.<string, string>}
+ */
 const phoneHash = {
   'Marcus Aurelius': '+380445554433',
   'John Doe': '+380445556677',
   'Jane Smith': '+380445559988'
 };
 
-// Task 4: Find phone by name using hash
+/**
+ * Функція пошуку телефону за ім'ям у хеш-таблиці
+ * @param {string} name - Ім'я для пошуку
+ * @returns {string|null} Знайдений номер телефону або null
+ */
 const findPhoneByNameHash = (name) => phoneHash[name] || null;
 
-// Exporting for tests
+// Експортуємо для тестів
 module.exports = {
   phoneBook,
   findPhoneByName,

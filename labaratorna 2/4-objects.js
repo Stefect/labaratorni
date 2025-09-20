@@ -1,33 +1,46 @@
 'use strict';
 
-// Task 1: Object manipulation function
+/**
+ * @fileoverview Вправа на роботу з об'єктами у JavaScript
+ * @author Your Name
+ */
+
+/**
+ * Функція демонструє різницю між const та let при роботі з об'єктами
+ * @returns {Object} Модифікований об'єкт
+ */
 const fn = () => {
-  // Creating object with constant reference
+  // Створюємо об'єкт з константним посиланням
   const constObject = { name: 'John' };
   
-  // Creating object with variable reference
+  // Створюємо об'єкт зі змінним посиланням
   let varObject = { name: 'John' };
   
-  // Modifying properties (this works for both)
+  // Модифікуємо властивості (працює для обох об'єктів)
   constObject.name = 'Peter';
   varObject.name = 'Peter';
   
-  // Reassigning reference (only works for varObject)
+  // Перепризначення посилання (працює тільки для varObject)
   varObject = { name: 'James' };
   
-  // We can't reassign constObject because it's constant:
-  // constObject = { name: 'James' }; // This would throw an error
+  // Не можемо перепризначити constObject, бо це константа:
+  // constObject = { name: 'James' }; // Це викличе помилку
   
   return varObject;
 };
 
-// Task 2: Create user function
+/**
+ * Функція для створення об'єкта користувача
+ * @param {string} name - Ім'я користувача
+ * @param {string} city - Місто користувача
+ * @returns {Object} Об'єкт користувача з властивостями name та city
+ */
 const createUser = (name, city) => ({
   name,
   city
 });
 
-// Exporting for tests
+// Експортуємо для тестів
 module.exports = {
   fn,
   createUser

@@ -1,15 +1,36 @@
 'use strict';
 
-// Task 1: Average function
+/**
+ * @fileoverview Вправа на роботу з функціями та вкладеними викликами у JavaScript
+ * @author Your Name
+ */
+
+/**
+ * Функція для обчислення середнього арифметичного двох чисел
+ * @param {number} a - Перше число
+ * @param {number} b - Друге число
+ * @returns {number} Середнє арифметичне
+ */
 const average = (a, b) => (a + b) / 2;
 
-// Task 2: Square function
+/**
+ * Функція для обчислення квадрату числа
+ * @param {number} x - Число для піднесення до квадрату
+ * @returns {number} Квадрат числа
+ */
 const square = (x) => x * x;
 
-// Task 3: Cube function
+/**
+ * Функція для обчислення кубу числа
+ * @param {number} x - Число для піднесення до кубу
+ * @returns {number} Куб числа
+ */
 const cube = (x) => x * x * x;
 
-// Task 4: Calculate function with nested calls
+/**
+ * Функція, що обчислює середні значення між квадратами та кубами чисел від 0 до 9
+ * @returns {number[]} Масив середніх значень
+ */
 const calculate = () => {
   const results = [];
   for (let i = 0; i <= 9; i++) {
@@ -20,7 +41,7 @@ const calculate = () => {
   return results;
 };
 
-// Exporting for tests
+// Експортуємо для тестів
 module.exports = {
   average,
   square,
